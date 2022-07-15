@@ -1,0 +1,106 @@
+:root {
+  --cjw-primary-color: #c21f15;
+  --cjw-secondary-color: #e0a32f;
+  --cjw-tertiary-color: #bea58f;
+  --cjw-dark-color: #203849;
+  --cjw-light-color: #9f9f9f;
+  --cjw-nav-toggler-glow: rgba(190, 165, 143, 0.3);
+}
+
+/* the :root syntax tells the website that these variables can 
+be invoked by ANY of the multiple stylesheets that we will be 
+using in this project. */
+
+/* sticky footer setup */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+  margin-top: 3rem;
+}
+
+.footer {
+  flex-shrink: 0;
+  background-color: var(--cjw-dark-color);
+  padding: 1rem 1rem 1rem 1rem;
+  color: var(--cjw-light-color);
+}
+/* sticky footer setup end */
+
+/* navbar overrides */
+#mainNav {
+  background: var(--cjw-dark-color);
+}
+
+#mainNav button {
+  border-color: var(--cjw-tertiary-color);
+}
+
+.navbar-toggler-icon-cjw-secondary {
+  color: var(--cjw-secondary-color);
+}
+
+.navbar-toggler {
+  color: var(--cjw-nav-toggler-glow) !important;
+}
+/* navbar overrides end */
+
+.checklist {
+  list-style-type: none;
+}
+
+.checklist > li i {
+  color: var(--cjw-dark-color);
+}
+
+.devicons {
+  font-size: 3.5rem;
+}
+
+.social {
+  font-size: 3.5rem;
+}
+
+.social > a {
+  color: var(--cjw-light-color);
+}
+
+/* bs button overrides */
+
+.btn-primary {
+  color: white !important;
+  background-color: var(--cjw-dark-color) !important;
+  border-color: var(--cjw-primary-color);
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+  filter: brightness(1.5) !important;
+  border-color: var(--cjw-dark-color);
+}
+
+.btn-outline-primary {
+    color: var(--cjw-dark-color) !important;
+    border-color: var(--cjw-primary-color);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:focus {
+    color: var(--cjw-light-color) !important;
+    border-color: var(--cjw-secondary-color) !important;
+    background-color: var(--cjw-dark-color) !important;
+}
+
+
+/* bs button overrides end */
