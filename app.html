@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>APP NAME: Coding Challenge By Cameron Wilson</title>
+    <title>Hundo: Coding Challenge By Cameron Wilson</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -45,7 +45,7 @@
             height="50"
             class="d-inline-block align-text-top"
           />
-          APP NAME</a
+          HUNDO</a
         >
         <button
           class="navbar-toggler"
@@ -83,9 +83,21 @@
     </nav>
     <main class="content">
       <div class="container mt-5">
-        <h1>APP UI GOES HERE</h1>
-        <input type="text" id="message" placeholder="Enter a message." />
-        <button id="btnSubmit" class="btn btn-primary">Display Message</button>
+        <h1>Enter a Number:</h1>
+        <input
+          type="number"
+          id="startValue"
+          placeholder="Enter a number."
+          value="1"
+        />
+        <input
+          type="number"
+          id="endValue"
+          placeholder="Enter a number."
+          value="10"
+        />
+        <button id="btnSubmit" class="btn btn-primary">Display Number</button>
+        <div id="results"></div>
       </div>
     </main>
     <footer class="footer">
@@ -133,7 +145,9 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-      document.getElementById("btnSubmit").addEventListener("click", getValue2);
+      document
+        .getElementById("btnSubmit")
+        .addEventListener("click", getNumbers);
     </script>
   </body>
 </html>
