@@ -90,17 +90,29 @@ body {
 }
 
 .btn-outline-primary {
-    color: var(--cjw-dark-color) !important;
-    border-color: var(--cjw-primary-color);
+  color: var(--cjw-dark-color) !important;
+  border-color: var(--cjw-primary-color);
 }
 
 .btn-outline-primary:hover,
 .btn-outline-primary:active,
 .btn-outline-primary:focus {
-    color: var(--cjw-light-color) !important;
-    border-color: var(--cjw-secondary-color) !important;
-    background-color: var(--cjw-dark-color) !important;
+  color: var(--cjw-light-color) !important;
+  border-color: var(--cjw-secondary-color) !important;
+  background-color: var(--cjw-dark-color) !important;
 }
 
-
 /* bs button overrides end */
+
+.odd {
+  font-weight: bold;
+  font-size: 2rem;
+  color: red;
+}
+
+.even {
+  font-size: 1rem;
+  color: green;
+}
+
+/* Add classes to the even/odd numbers */

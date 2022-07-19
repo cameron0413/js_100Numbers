@@ -7,16 +7,55 @@ function getNumbers() {
   //parsing numbers below
   startValue = parseInt(startValue);
   endValue = parseInt(endValue);
-  let outNumber = 0;
 
   if (Number.isInteger(startValue) && Number.isInteger(endValue)) {
-    for (let i = startValue; i <= endValue; i++) {
-      outNumber = ;
-    }
+    let numbers = generateNumbers(startValue, endValue);
+    displayValues(numbers);
 
     document.getElementById("results").innerHTML = outNumber;
   } else {
     alert("Please Enter Numbers");
+  }
+  //business logic below:
+  function generateNumbers(start, stop) {
+    let numbers = [];
+
+    for (let i = start; i <= stop; i++) {
+      numbers.push(i);
+    }
+    return numbers;
+  }
+
+  //display the list of numbers
+  //View function
+  //Embolden the even numbers
+  //Do something else with the odd numbers
+  function displayValues(numArray) {
+    let results = document.getElementById("results");
+    results.innerHTML = "";
+    //my template
+    //<div class="col">1</div>
+    for (let i = 0; i < numArray.length; i++) {
+      //we need to get our results area
+
+      //create div tag
+      let div = document.createElement("div");
+      //get the value in the array at hte current index
+      div.innerHTML = numArray[i];
+      //add class
+      div.classList.add("col");
+      //if number is odd, add the odd class.
+      if (numArray[i] % 2 == 0) {
+        div.classList.add("odd");
+      } else {
+        div.classList.add("even");
+      }
+      //if number is even, add the even class.
+
+      //insert the value
+      results.appendChild(div);
+      //append to the page
+    }
   }
 
   /* let a = 10;
@@ -26,7 +65,7 @@ function getNumbers() {
 
   number = b; */
 
-  document.getElementById("results").innerHTML = outNumber;
+  //document.getElementById("results").innerHTML = outNumber;
 
   //Equivalences in JavaScript ALWAYS go right nested into left.
   //So,
